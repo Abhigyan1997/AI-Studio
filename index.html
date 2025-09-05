@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>AI Studio</title>
+     TailwindCSS via CDN for this prototype 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind inline config: limit colors and ensure consistent design tokens
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                DEFAULT: '#2563eb', // primary (blue-600)
+                dark: '#1e40af', // blue-800
+              },
+              accent: {
+                DEFAULT: '#10b981', // emerald-500
+              },
+            },
+            boxShadow: {
+              card: '0 4px 24px rgba(0,0,0,0.08)',
+            },
+            borderRadius: {
+              xl: '0.875rem',
+            },
+          },
+        },
+      }
+    </script>
+    <meta name="color-scheme" content="light dark" />
+  </head>
+  <body class="min-h-screen bg-gray-50 text-gray-900 antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
